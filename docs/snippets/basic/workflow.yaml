@@ -1,0 +1,20 @@
+name: "Portainer Stack Deploy"
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: "Deploy"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v5
+
+      # Add Steps to Prepare Your Stack File or Environment...
+
+      - name: "Portainer Deploy"
+        uses: cssnr/portainer-stack-deploy-action@v1
+        with:
+          name: "stack-name"
+          file: "docker-compose.yaml"
+          url: ${{ secrets.PORTAINER_URL }}
+          token: ${{ secrets.PORTAINER_TOKEN }}

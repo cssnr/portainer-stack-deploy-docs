@@ -1,0 +1,8 @@
+- name: "Portainer Deploy"
+  uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    name: "stack-name"
+    file: "docker-compose.yaml"
+    url: ${{ secrets.PORTAINER_URL }}
+    token: ${{ secrets.PORTAINER_TOKEN }}
+    fs_path: /mnt

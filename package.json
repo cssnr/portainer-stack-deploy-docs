@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
+    "prettier": "npx prettier --check .",
+    "get-contributors": "node .vitepress/get-contributors.js cssnr/portainer-stack-deploy-action",
+    "postinstall": "npm run get-contributors"
+  },
+  "dependencies": {
+    "@catppuccin/vitepress": "^0.1.2",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.6.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
