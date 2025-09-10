@@ -10,8 +10,6 @@ If you run into any issues or want to see any new features, please let us know!
 
 Contributing is as easy as telling us [what features or changes](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests) you want to see next…
 
-[[toc]]
-
 ### GitHub Discussions
 
 If you have a question or need help with anything,
