@@ -1,0 +1,20 @@
+- name: "Import Secrets"
+  id: import-secrets
+  uses: hashicorp/vault-action@v2
+  with:
+    url: https://vault.mycompany.com:8200
+    token: ${{ secrets.VAULT_TOKEN }}
+    caCertificate: ${{ secrets.VAULT_CA_CERT }}
+    secrets: |
+      secret/data/ci/aws accessKey | AWS_ACCESS_KEY_ID ;
+      secret/data/ci/aws secretKey | AWS_SECRET_ACCESS_KEY ;
+      secret/data/ci npm_token
+
+- name: "Portainer Deploy"
+  uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    name: "stack-name"
+    file: "docker-compose.yaml"
+    url: ${{ secrets.PORTAINER_URL }}
+    token: ${{ secrets.PORTAINER_TOKEN }}
+    env_json: ${{ toJSON(steps.import-secrets.outputs) }}

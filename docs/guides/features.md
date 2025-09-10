@@ -1,6 +1,7 @@
 # Features
 
-Deploy or Update a Portainer Stack from a Repository or Compose File. Supports both Swarm and Standalone Docker deployments for Portainer Community and Business Enterprise Edition.
+Deploy or Update a Portainer Stack from a Repository or Compose File.
+Supports both Swarm and Standalone Docker deployments for Portainer Community and Business Enterprise Edition.
 
 - Deploy a new stack or update existing one.
 - Deploy from a repository or a compose file, see [type](../docs/inputs.md#type).
@@ -58,6 +59,8 @@ To date all [issue](https://github.com/cssnr/portainer-stack-deploy-action/issue
 None of these actions have been tested. This is an exhaustive list of published actions.
 :::
 
+<!-- Sort Order - 1: Stars - 2: Forks - 3: Updated -->
+
 <StackTable
 :repos="[
 'cssnr/portainer-stack-deploy-action',
@@ -79,13 +82,13 @@ None of these actions have been tested. This is an exhaustive list of published 
 'scod-br/portainer-stack-deploy',
 'dann41/portainer-stack-deploy',
 'ManicMade/portainer-git-stack-redeploy-action',
-'mantichor/portainer-action',
-'Morgul/portainer-stack-deploy',
-'inova-notas/portainer-stack-deploy',
-'KevinLamSeck/gh-action-portainer-stack-deploy',
-'SimonPrinz/portainer-deploy-action',
-'robin-moser/portainer-stack-deploy',
 'fe5dds9/portainer-deploy-action',
+'robin-moser/portainer-stack-deploy',
+'SimonPrinz/portainer-deploy-action',
+'KevinLamSeck/gh-action-portainer-stack-deploy',
+'inova-notas/portainer-stack-deploy',
+'Morgul/portainer-stack-deploy',
+'mantichor/portainer-action',
 ]"
 </StackTable>
 
