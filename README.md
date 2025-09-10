@@ -2,7 +2,7 @@
 [![GitHub Pages](https://img.shields.io/github/actions/workflow/status/cssnr/portainer-stack-deploy-docs/pages.yaml?logo=cachet&label=pages)](https://github.com/cssnr/portainer-stack-deploy-docs/actions/workflows/pages.yaml)
 [![GitHub Lint](https://img.shields.io/github/actions/workflow/status/cssnr/portainer-stack-deploy-docs/lint.yaml?logo=cachet&label=lint)](https://github.com/cssnr/portainer-stack-deploy-docs/actions/workflows/lint.yaml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/portainer-stack-deploy-docs?logo=vitepress&logoColor=white&label=updated)](https://github.com/cssnr/portainer-stack-deploy-docs/pulse)
-[![GitHub Contributors](https://img.shields.io/github/contributors/cssnr/zipline-android-docs?logo=github)](https://github.com/cssnr/zipline-android-docs/graphs/contributors)
+[![GitHub Contributors](https://img.shields.io/github/contributors/cssnr/portainer-stack-deploy-docs?logo=github)](https://github.com/cssnr/portainer-stack-deploy-docs/graphs/contributors)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/cssnr/portainer-stack-deploy-docs?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/cssnr/portainer-stack-deploy-docs)
 [![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/portainer-stack-deploy-action?logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/discussions)
 [![GitHub Repo Stars](https://img.shields.io/github/stars/cssnr/portainer-stack-deploy-action?style=flat&logo=github)](https://github.com/cssnr/portainer-stack-deploy-action)

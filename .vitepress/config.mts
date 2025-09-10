@@ -85,7 +85,7 @@ export default defineConfig({
           { text: 'GitHub Repository', link: settings.source_repo },
           { text: 'GitHub Marketplace', link: settings.actions_url },
           { text: 'GitHub Documentation', link: settings.docs_repo },
-          { text: 'Docker Stack Deploy', link: 'https://github.com/cssnr/stack-deploy-action' },
+          { text: 'Docker Stack Deploy', link: 'https://docker-deploy.cssnr.com/' },
           { text: 'Developer Site', link: 'https://cssnr.github.io/' },
           { text: 'Contribute', link: 'https://ko-fi.com/cssnr' },
         ],
@@ -158,13 +158,13 @@ export default defineConfig({
     },
 
     search: {
-      provider: 'local',
-      // provider: 'algolia',
-      // options: {
-      //   appId: 'EW5LL0AH1S',
-      //   apiKey: '3f12593e3e1384f0a82282a8d8eb2e47',
-      //   indexName: 'portainer-stack-deploy-docs',
-      // },
+      // provider: 'local',
+      provider: 'algolia',
+      options: {
+        appId: 'XSN5ZNPC6V',
+        apiKey: '63353add0e27e0c1ddc27aa399aa84c3',
+        indexName: 'portainer-stack-deploy-docs',
+      },
     },
 
     // footer: {

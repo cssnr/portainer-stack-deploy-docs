@@ -134,7 +134,8 @@ This can be used with [env_file](#env_file). Values in [env_file](#env_file) tak
 
 ::: warning
 Inputs are NOT secure unless using secrets or secure output (masked).
-Using [env_json](#env_json) on a public repository will otherwise expose this data in the actions' logs.
+Using `env_json` on a public repository will otherwise expose this data in the actions' logs.
+For an example of an action that produces secure out for use with `env_json` see the [hashicorp/vault-action example](../guides/examples.md#multi-step).
 To securely pass unmasked values, use the [env_file](#env_file) option.
 :::
 

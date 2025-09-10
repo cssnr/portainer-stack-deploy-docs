@@ -49,6 +49,14 @@ This is done by setting: <span v-pre>`if: ${{ github.event_name == 'release' }}`
 
 </details>
 
+## Multi-Step
+
+<details><summary>Use Output with toJSON - hashicorp/vault-action</summary>
+
+<<< @/snippets/examples/multi/tojson.yaml [yaml]
+
+</details>
+
 ## Workflows
 
 <details><summary>Full Workflow Example</summary>
