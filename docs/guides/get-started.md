@@ -55,9 +55,9 @@ If working within an [GitHub Organization](https://docs.github.com/en/organizati
 you can create these secrets in the organization and make them available to all your repositories.
 _This is why I use the [cssnr](https://github.com/cssnr) organization._
 
-## Vanilla Docker
+## Native Docker
 
-If you don't use Portainer, you can deploy directly to [Docker](https://docs.docker.com/).
+If you don't use Portainer, you can deploy directly to a native [Docker](https://docs.docker.com/) host.
 
 For this you should use: [cssnr/stack-deploy-action](https://github.com/cssnr/stack-deploy-action)
 

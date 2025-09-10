@@ -10,7 +10,7 @@ const settings = {
     long: 'Deploy or Update a Portainer Stack from a Repository or Compose File. Supports both Swarm and Standalone Docker deployments for Portainer Community and Business Enterprise Edition.',
   },
   image: '/images/logo/logo.png',
-  color: '#0BA5EC',
+  color: '#C080FF',
   docs_repo: 'https://github.com/cssnr/portainer-stack-deploy-docs',
   source_repo: 'https://github.com/cssnr/portainer-stack-deploy-action',
   actions_url: 'https://github.com/marketplace/actions/portainer-stack-deploy-action',
@@ -146,7 +146,7 @@ export default defineConfig({
 
     editLink: {
       pattern: `${settings.docs_repo}/blob/master/docs/:path`,
-      text: 'View on GitHub',
+      text: 'View or Edit on GitHub',
     },
 
     lastUpdated: {

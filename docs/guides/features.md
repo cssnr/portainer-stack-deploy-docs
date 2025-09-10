@@ -51,9 +51,12 @@ Breaking changes would result in a **Major** version bump. At a minimum you shou
 The majority of other actions available have not been recently updated
 and most of them are forks and clones of each other.
 
-This action was built from the ground up with an easily extendable API to provide all the necessary [features](features.md) to deploy any Portainer stack from any GitHub Action.
+This action was built from the ground up with an easily extendable API to provide
+any feature needed to deploy any Portainer stack from any GitHub Action.
 
-To date all [issue](https://github.com/cssnr/portainer-stack-deploy-action/issues) have been fixed and all [feature requests](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests) added.
+The goal of this action is to be the ultimate Docker deployment action on GitHub.
+To date all [issue](https://github.com/cssnr/portainer-stack-deploy-action/issues) have been fixed
+and all [feature requests](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests) added.
 
 ::: warning
 None of these actions have been tested. This is an exhaustive list of published actions.
