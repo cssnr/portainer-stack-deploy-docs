@@ -20,7 +20,7 @@ _If creating a [new workflow](https://docs.github.com/en/actions/concepts/workfl
 
 ::: code-group
 <<< @/snippets/guides/get-started/step.yaml {4,5 yaml} [Existing Workflow ~vscode-icons:folder-type-github~]
-<<< @/snippets/guides/get-started/workflow.yaml {17,18 yaml} [New Workflow ~vscode-icons:folder-type-github~]
+<<< @/snippets/guides/get-started/workflow.yaml {15,16 yaml} [New Workflow ~vscode-icons:folder-type-github~]
 :::
 
 **Make sure to update the highlighted lines and add your [secrets](#secrets).**
