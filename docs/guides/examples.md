@@ -43,6 +43,11 @@ This is done by setting: <span v-pre>`if: ${{ github.event_name == 'release' }}`
 <<< @/snippets/examples/steps/release.yaml [yaml]
 
 </details>
+<details><summary>Add Cloudflare Zero Trust service token headers </summary>
+
+<<< @/snippets/examples/steps/cloudflare.yaml [yaml]
+
+</details>
 <details><summary>Deploy with relative path volumes <Badge type="tip" text="Business Edition" /></summary>
 
 <<< @/snippets/examples/steps/path.yaml [yaml]

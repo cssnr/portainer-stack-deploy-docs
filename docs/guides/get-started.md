@@ -27,12 +27,15 @@ _If creating a [new workflow](https://docs.github.com/en/actions/concepts/workfl
 
 The only 3 required inputs are [token](../docs/inputs.md#token), [url](../docs/inputs.md#url), and [name](../docs/inputs.md#name).
 
-See the [Inputs Documentation](../docs/inputs.md) for additional options and default values.
-
-Check out the [Rolling Tags](features.md#rolling-tags) for more tag options,
-however `@v1` is recommended.
+Check out the [Rolling Tags](features.md#rolling-tags) for more tag options, however `@v1` is recommended.
 
 [![Latest Version](https://img.shields.io/github/v/release/cssnr/portainer-stack-deploy-action?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/cssnr/portainer-stack-deploy-action/releases)
+
+<div class="tip custom-block" style="padding-top: 8px">
+
+See the [Inputs Documentation](../docs/inputs.md) for additional options and **default values**.
+
+</div>
 
 ## Usage
 
@@ -44,7 +47,11 @@ If you check out your repository to the root and your compose file is in the `ap
 You can provide environment variables from either a file or JSON.
 If providing secrets via [env_json](../docs/inputs.md#env_json) they should come from secure input (masked).
 
-See the [Inputs Documentation](../docs/inputs.md) for additional options and more details.
+<div class="tip custom-block" style="padding-top: 8px">
+
+See the [Inputs Documentation](../docs/inputs.md) for more options and detailed usage.
+
+</div>
 
 ## Secrets
 
