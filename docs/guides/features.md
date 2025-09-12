@@ -1,14 +1,16 @@
 # Features
 
-Deploy or Update a Portainer Stack from a Repository or Compose File.
-Supports both Swarm and Standalone Docker deployments for Portainer Community and Business Enterprise Edition.
+Deploy or Update a [Portainer](https://www.portainer.io/) Stack from a Repository or Compose File.
+Supports both Swarm and Standalone Docker deployments for Portainer [Community Edition](https://github.com/portainer/portainer)
+and [Business Enterprise Edition](https://www.portainer.io/solutions/portainer-for-enterprise).
 
-- Deploy a new stack or update existing one.
+- Deploy or re-deploy an existing stack otherwise create a new stack.
 - Deploy from a repository or a compose file, see [type](../docs/inputs.md#type).
 - Deploy from a different [repo](../docs/inputs.md#repo) than the current one.
 - Provide environment variables in [JSON](../docs/inputs.md#env_json) or [file](../docs/inputs.md#env_file) format.
 - Automatically parse [Endpoint ID](../docs/inputs.md#endpoint) if only one endpoint.
 - Supports Docker Swarm and Docker [Standalone](../docs/inputs.md#standalone).
+- Supports custom [headers](../docs/inputs#headers) for services like Cloudflare Zero Trust.
 - **To view all features see the [Inputs Documentation](../docs/inputs.md).**
 
 You can [get started here](get-started.md) or view [workflow examples](examples.md).
@@ -54,7 +56,7 @@ and most of them are forks and clones of each other.
 This action was built from the ground up with an easily extendable API to provide
 any feature needed to deploy any Portainer stack from any GitHub Action.
 
-The goal of this action is to be the ultimate Docker deployment action on GitHub.
+The goal of this action is to be the ultimate Portainer deployment action on GitHub.
 To date all [issue](https://github.com/cssnr/portainer-stack-deploy-action/issues) have been fixed
 and all [feature requests](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests) added.
 
