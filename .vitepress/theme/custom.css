@@ -1,9 +1,10 @@
 :root {
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #8250b1, 30%, #ca96ff);
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #ff80f2, 30%, #c080ff);
     --vp-home-hero-image-background-image: linear-gradient(0deg, #c080ff, #c080ff);
     --vp-home-hero-image-filter: blur(72px);
 
+    --vp-sidebar-width: 230px; /* Custom Sidebar Width */
     --vp-button-alt-bg: var(--vp-c-default-1);
 }
 
@@ -26,4 +27,13 @@ table th {
 
 .search-keywords {
     display: none;
+}
+
+/* NOTE: This is a "fix" for the search modal content shift */
+@supports (scrollbar-gutter: stable) {
+    @media (min-width: 769px) {
+        html {
+            scrollbar-gutter: stable;
+        }
+    }
 }

@@ -19,8 +19,8 @@ Add the step to an existing workflow or create a new one.
 _If creating a [new workflow](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows#about-workflows), place it in the `.github/workflows` directory._
 
 ::: code-group
-<<< @/snippets/basic/step.yaml {4,5 yaml} [Existing Workflow ~vscode-icons:folder-type-github~]
-<<< @/snippets/basic/workflow.yaml {17,18 yaml} [New Workflow ~vscode-icons:folder-type-github~]
+<<< @/snippets/guides/get-started/step.yaml {4,5 yaml} [Existing Workflow ~vscode-icons:folder-type-github~]
+<<< @/snippets/guides/get-started/workflow.yaml {15,16 yaml} [New Workflow ~vscode-icons:folder-type-github~]
 :::
 
 **Make sure to update the highlighted lines and add your [secrets](#secrets).**
@@ -28,6 +28,11 @@ _If creating a [new workflow](https://docs.github.com/en/actions/concepts/workfl
 The only 3 required inputs are [token](../docs/inputs.md#token), [url](../docs/inputs.md#url), and [name](../docs/inputs.md#name).
 
 See the [Inputs Documentation](../docs/inputs.md) for additional options and default values.
+
+Check out the [Rolling Tags](features.md#rolling-tags) for more tag options,
+however `@v1` is recommended.
+
+[![Latest Version](https://img.shields.io/github/v/release/cssnr/portainer-stack-deploy-action?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/cssnr/portainer-stack-deploy-action/releases)
 
 ## Usage
 

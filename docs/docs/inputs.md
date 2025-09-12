@@ -25,11 +25,12 @@ title: Inputs Documentation
 | [merge_env](#merge_env)   | `false`                       | Merge Env Vars                            |
 | [username](#username)     | -                             | Repository Username                       |
 | [password](#password)     | -                             | Repository Password                       |
+| [headers](#headers)       | `"{}"`                        | Custom Headers JSON                       |
 | [fs_path](#fs_path) **¹** | -                             | Relative Path (BE)                        |
 | [summary](#summary)       | `true`                        | Add Summary to Job                        |
 
 > **\* Required**  
-> **¹ Business Edition Only**
+> **¹ Business Edition**
 
 For more details on inputs see the [Portainer CE API Documentation](https://app.swaggerhub.com/apis/portainer/portainer-ce/).
 
@@ -132,6 +133,32 @@ File should be in dotenv format and JSON should be an object. Example: {"KEY": "
 
 This can be used with [env_file](#env_file). Values in [env_file](#env_file) take precedence over these values.
 
+::: details View JSON Input Examples
+
+These examples are identical, just different ways of passing the input.
+
+::: code-group
+
+```yaml [Multi-Line JSON]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_json: |
+      {
+        "KEY": "Value",
+        "KEY_2": "Value 2"
+      }
+```
+
+```yaml [Single Line JSON]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_json: '{"KEY": "Value", "KEY_2": "Value 2"}'
+```
+
+Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
+
+:::
+
 ::: warning
 Inputs are NOT secure unless using secrets or secure output (masked).
 Using `env_json` on a public repository will otherwise expose this data in the actions' logs.
@@ -141,9 +168,28 @@ To securely pass unmasked values, use the [env_file](#env_file) option.
 
 ### env_file {#env_file}
 
-Environment File in [dotenv](https://www.dotenv.org/docs/security/env) format, parsed using [dotenv](https://www.npmjs.com/package/dotenv).
+Environment File in [dotenv](https://www.npmjs.com/package/dotenv) format, parsed using [dotenv](https://www.npmjs.com/package/dotenv).
 
 This can be used with [env_json](#env_json). Values in this file take precedence over [env_json](#env_json).
+
+::: details View Environment File Input Example
+
+::: code-group
+
+```dotenv [.env]
+KEY="Value"
+KEY_2="Value 2"
+```
+
+```yaml [.github/workflow.yaml]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_file: .env
+```
+
+Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
+
+:::
 
 ### merge_env {#merge_env}
 
@@ -169,7 +215,35 @@ Password for private repository authentication when [type](#type) is set to `rep
 
 This is **NOT** your Portainer password, see [token](#token) for Portainer authentication.
 
-### fs_path <Badge type="tip" text="Business Edition Only" /> {#fs_path}
+### headers
+
+Custom Headers in **JSON** format for services like Cloudflare Zero Trust.
+
+The `headers` are parsed with JSON.parse and passed directly to axios:
+
+```javascript
+headers: { 'X-API-Key': token, ...JSON.parse(headers) }
+```
+
+::: details View Headers Input Example
+
+```yaml
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    headers: |
+      {
+        "CF-Access-Client-Id": "${{ secrets.CF_CLIENT_ID }}",
+        "CF-Access-Client-Secret": "${{ secrets.CF_CLIENT_SECRET }}"
+      }
+```
+
+Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
+
+:::
+
+Default: `"{}"`
+
+### fs_path <Badge type="tip" text="Business Edition" /> {#fs_path}
 
 Relative Path Support for Portainer BE.
 Set this to enable relative path volumes support for volume mappings in your compose file.

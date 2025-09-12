@@ -123,7 +123,7 @@ export default defineConfig({
           { text: 'Get Started', link: '/get-started' },
           { text: 'Features', link: '/features' },
           { text: 'Examples', link: '/examples' },
-          //
+          // { text: 'Deploy from GitHub', link: '/github-deploy' },
         ],
       },
       {
