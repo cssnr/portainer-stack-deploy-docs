@@ -28,3 +28,12 @@ table th {
 .search-keywords {
     display: none;
 }
+
+/* NOTE: This is a "fix" for the search modal content shift */
+@supports (scrollbar-gutter: stable) {
+    @media (min-width: 769px) {
+        html {
+            scrollbar-gutter: stable;
+        }
+    }
+}

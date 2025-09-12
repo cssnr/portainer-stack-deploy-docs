@@ -29,6 +29,11 @@ The only 3 required inputs are [token](../docs/inputs.md#token), [url](../docs/i
 
 See the [Inputs Documentation](../docs/inputs.md) for additional options and default values.
 
+Check out the [Rolling Tags](features.md#rolling-tags) for more tag options,
+however `@v1` is recommended.
+
+[![Latest Version](https://img.shields.io/github/v/release/cssnr/portainer-stack-deploy-action?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/cssnr/portainer-stack-deploy-action/releases)
+
 ## Usage
 
 You only need to set the [name](../docs/inputs.md#name), [url](../docs/inputs.md#url), [token](../docs/inputs.md#token) and optionally the stack [file](../docs/inputs.md#file) to deploy a stack.
