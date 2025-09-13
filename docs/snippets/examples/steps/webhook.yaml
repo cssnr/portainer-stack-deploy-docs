@@ -1,0 +1,4 @@
+- name: "Portainer Webhook"
+  uses: cssnr/web-request-action@v1
+  with:
+    url: ${{ secrets.PORTAINER_WEBHOOK }}

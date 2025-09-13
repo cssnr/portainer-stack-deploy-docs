@@ -53,6 +53,13 @@ This is done by setting: <span v-pre>`if: ${{ github.event_name == 'release' }}`
 <<< @/snippets/examples/steps/path.yaml [yaml]
 
 </details>
+<details><summary>Trigger a Portainer Webhook Service <Badge type="tip" text="Webhook" /></summary>
+
+<<< @/snippets/examples/steps/webhook.yaml [yaml]
+
+This uses: [cssnr/web-request-action](https://github.com/cssnr/web-request-action)
+
+</details>
 
 ## Multi-Step
 
@@ -72,6 +79,12 @@ This is done by setting: <span v-pre>`if: ${{ github.event_name == 'release' }}`
 
 For more examples, you can check out other projects using this action:  
 https://github.com/cssnr/portainer-stack-deploy-action/network/dependents
+
+&nbsp;
+
+::: info Get Help
+If you have more questions, please [request support](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests)
+:::
 
 <style scoped>
 summary {
