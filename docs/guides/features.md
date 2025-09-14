@@ -78,6 +78,7 @@ None of these actions have been tested. This is an exhaustive list of published 
 'wirgen/portainer-stack-redeploy-action',
 'bots-house/portainer-deploy-stack-action',
 'rrennoir/portainer-stack',
+'luminos-company/portami',
 'Hugollemos/deploy',
 'sdjnmxd/portainer-stack-deploy',
 'AlexPshkov/portainer-stack-deploy',
