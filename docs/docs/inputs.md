@@ -6,28 +6,28 @@ title: Inputs Documentation
 
 💡 Click on the **Input Name** for more [Details](#details).
 
-| Input&nbsp;Name                          | Default&nbsp;Input&nbsp;Value | Short&nbsp;Description&nbsp;of&nbsp;Input |
-| :--------------------------------------- | :---------------------------- | :---------------------------------------- |
-| [name](#name) **\*** <CopyButton />      | -                             | Stack Name                                |
-| [url](#url) **\*** <CopyButton />        | -                             | Portainer URL                             |
-| [token](#token) **\*** <CopyButton />    | -                             | Portainer Token                           |
-| [file](#file) <CopyButton />             | `docker-compose.yaml`         | Compose File                              |
-| [endpoint](#endpoint) <CopyButton />     | `endpoints[0].Id`             | Portainer Endpoint                        |
-| [ref](#ref) <CopyButton />               | `current reference`           | Repository Ref                            |
-| [repo](#repo) <CopyButton />             | `current repository`          | Repository URL                            |
-| [tlsskip](#tlsskip) <CopyButton />       | `false`                       | Skip Repo TLS Verify                      |
-| [prune](#prune) <CopyButton />           | `true`                        | Prune Services                            |
-| [pull](#pull) <CopyButton />             | `true`                        | Pull Images                               |
-| [type](#type) <CopyButton />             | `repo`                        | Type [`repo`, `file`]                     |
-| [standalone](#standalone) <CopyButton /> | `false`                       | Deploy Standalone Stack                   |
-| [env_json](#env_json) <CopyButton />     | -                             | Dotenv JSON Data                          |
-| [env_file](#env_file) <CopyButton />     | -                             | Dotenv File Path                          |
-| [merge_env](#merge_env) <CopyButton />   | `false`                       | Merge Env Vars                            |
-| [username](#username) <CopyButton />     | -                             | Repository Username                       |
-| [password](#password) <CopyButton />     | -                             | Repository Password                       |
-| [headers](#headers) <CopyButton />       | `"{}"`                        | Custom Headers JSON                       |
-| [fs_path](#fs_path) **¹** <CopyButton /> | -                             | Relative Path (BE)                        |
-| [summary](#summary) <CopyButton />       | `true`                        | Add Summary to Job                        |
+| Input&nbsp;Name                  | Default&nbsp;Input&nbsp;Value | Short&nbsp;Description&nbsp;of&nbsp;Input |
+| :------------------------------- | :---------------------------- | :---------------------------------------- |
+| [name](#name) **\*** <CB />      | -                             | Stack Name                                |
+| [url](#url) **\*** <CB />        | -                             | Portainer URL                             |
+| [token](#token) **\*** <CB />    | -                             | Portainer Token                           |
+| [file](#file) <CB />             | `docker-compose.yaml`         | Compose File                              |
+| [endpoint](#endpoint) <CB />     | `endpoints[0].Id`             | Portainer Endpoint                        |
+| [ref](#ref) <CB />               | `current reference`           | Repository Ref                            |
+| [repo](#repo) <CB />             | `current repository`          | Repository URL                            |
+| [tlsskip](#tlsskip) <CB />       | `false`                       | Skip Repo TLS Verify                      |
+| [prune](#prune) <CB />           | `true`                        | Prune Services                            |
+| [pull](#pull) <CB />             | `true`                        | Pull Images                               |
+| [type](#type) <CB />             | `repo`                        | Type [`repo`, `file`]                     |
+| [standalone](#standalone) <CB /> | `false`                       | Deploy Standalone Stack                   |
+| [env_json](#env_json) <CB />     | -                             | Dotenv JSON Data                          |
+| [env_file](#env_file) <CB />     | -                             | Dotenv File Path                          |
+| [merge_env](#merge_env) <CB />   | `false`                       | Merge Env Vars                            |
+| [username](#username) <CB />     | -                             | Repository Username                       |
+| [password](#password) <CB />     | -                             | Repository Password                       |
+| [headers](#headers) <CB />       | `"{}"`                        | Custom Headers JSON                       |
+| [fs_path](#fs_path) **¹** <CB /> | -                             | Relative Path (BE)                        |
+| [summary](#summary) <CB />       | `true`                        | Add Summary to Job                        |
 
 > **\* Required**  
 > **¹ Business Edition**
@@ -36,13 +36,13 @@ For more details on inputs see the [Portainer CE API Documentation](https://app.
 
 ## Details
 
-### name <CopyButton /> <Badge type="warning" text="Requierd" />
+### name <CB /> <Badge type="warning" text="Requierd" />
 
 Swarm sack name or Compose project name.
 
 Example: `cool-stack`
 
-### url <CopyButton /> <Badge type="warning" text="Requierd" />
+### url <CB /> <Badge type="warning" text="Requierd" />
 
 Portainer URL.
 
@@ -50,13 +50,13 @@ This is the base url to your Portainer instance.
 
 Example: `https://portainer.example.com:9443`
 
-### token <CopyButton /> <Badge type="warning" text="Requierd" />
+### token <CB /> <Badge type="warning" text="Requierd" />
 
 Portainer API token.
 
 For Instructions to create an API token visit: https://docs.portainer.io/api/access
 
-### file <CopyButton />
+### file <CB />
 
 The Docker compose file. This path is relative to your working directory.
 
@@ -64,7 +64,7 @@ If you check out your repository to the root, and the compose file is called `do
 
 Default: `docker-compose.yaml`
 
-### endpoint <CopyButton />
+### endpoint <CB />
 
 If endpoint is not provided the first endpoint returned by the API will be used.
 If you only have one endpoint, this will work as expected, otherwise, you should provide an endpoint.
@@ -73,7 +73,7 @@ Example: `1`
 
 Default: `${endpoints[0]}`
 
-### ref <CopyButton />
+### ref <CB />
 
 This defaults to the reference that triggered the workflow.
 
@@ -83,7 +83,7 @@ Example: `refs/heads/master`
 
 Default: <span v-pre>`${{ github.ref }}`</span>
 
-### repo <CopyButton />
+### repo <CB />
 
 This defaults to the repository running the action.
 
@@ -93,40 +93,40 @@ Example: `https://github.com/cssnr/portainer-stack-deploy-action`
 
 Default: <span v-pre>`${{ github.server_url }}/${{ github.repository }}`</span>
 
-### tlsskip <CopyButton />
+### tlsskip <CB />
 
 Skips SSL verification when cloning the Git repository.
 Set to `true` to enable.
 
 Default: `false`
 
-### prune <CopyButton />
+### prune <CB />
 
 Prune services that are no longer referenced (only available for Swarm stacks).
 Set to `false` to disable.
 
 Default: `true`
 
-### pull <CopyButton />
+### pull <CB />
 
 Pull latest image before deploy. Set to `false` to disable.
 
 Default: `true`
 
-### type <CopyButton />
+### type <CB />
 
 Type of Deployment. Supports either `repo` or `file`.
 
 Default: `repo`
 
-### standalone <CopyButton />
+### standalone <CB />
 
 Deploy a **compose** stack instead of _swarm_.
 Set to `true` to enable.
 
 Default: `false`
 
-### env_json <CopyButton /> {#env_json}
+### env_json <CB /> {#env_json}
 
 Optional environment variables used when creating the stack.
 File should be in dotenv format and JSON should be an object. Example: {"KEY": "Value"}
@@ -166,7 +166,7 @@ For an example of an action that produces secure out for use with `env_json` see
 To securely pass unmasked values, use the [env_file](#env_file) option.
 :::
 
-### env_file <CopyButton /> {#env_file}
+### env_file <CB /> {#env_file}
 
 Environment File in [dotenv](https://www.npmjs.com/package/dotenv) format, parsed using [dotenv](https://www.npmjs.com/package/dotenv).
 
@@ -191,7 +191,7 @@ Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
 
 :::
 
-### merge_env <CopyButton /> {#merge_env}
+### merge_env <CB /> {#merge_env}
 
 Set this to `true` to merge the current environment variables from the existing stack
 with any newly provided variables in the [env_json](#env_json) or [env_file](#env_file) inputs.
@@ -203,19 +203,19 @@ When deploying a new stack, there are no current environment variables to merge,
 
 Default: `false`
 
-### username <CopyButton />
+### username <CB />
 
 Username for private repository authentication when [type](#type) is set to `repo`.
 
 This is **NOT** your Portainer username, see [token](#token) for Portainer authentication.
 
-### password <CopyButton />
+### password <CB />
 
 Password for private repository authentication when [type](#type) is set to `repo`.
 
 This is **NOT** your Portainer password, see [token](#token) for Portainer authentication.
 
-### headers <CopyButton />
+### headers <CB />
 
 Custom Headers in **JSON** format for services like Cloudflare Zero Trust.
 
@@ -243,14 +243,14 @@ Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
 
 Default: `"{}"`
 
-### fs_path <CopyButton /> <Badge type="tip" text="Business Edition" /> {#fs_path}
+### fs_path <CB /> <Badge type="tip" text="Business Edition" /> {#fs_path}
 
 Relative Path Support for Portainer BE.
 Set this to enable relative path volumes support for volume mappings in your compose file.
 
 _For more info see the [Portainer Documentation - Relative Path Support](https://docs.portainer.io/advanced/relative-paths)._
 
-### summary <CopyButton />
+### summary <CB />
 
 Write a Summary for the job. To disable this set to `false`.
 
