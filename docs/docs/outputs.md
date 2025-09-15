@@ -6,11 +6,11 @@ title: Outputs Documentation
 
 Details about the stack are output for use in additional steps.
 
-| Input&nbsp;Name           | Description |
-| :------------------------ | :---------- |
-| [stackID](#stackID)       | Stack ID    |
-| [swarmID](#swarmID)       | Swarm ID    |
-| [endpointID](#endpointID) | Endpoint ID |
+| Input&nbsp;Name                  | Description |
+| :------------------------------- | :---------- |
+| [stackID](#stackID) <CB />       | Stack ID    |
+| [swarmID](#swarmID) <CB />       | Swarm ID    |
+| [endpointID](#endpointID) <CB /> | Endpoint ID |
 
 ### stackID
 

@@ -35,6 +35,27 @@ features:
     link: https://docker-deploy.cssnr.com/
 ---
 
+<div class="badges">
+
+---
+
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/portainer-stack-deploy-action?logo=github&label=updated)](https://github.com/cssnr/portainer-stack-deploy-action)
+[![Docs Last Commit](https://img.shields.io/github/last-commit/cssnr/portainer-stack-deploy-docs?logo=vitepress&logoColor=white&label=docs)](https://github.com/cssnr/portainer-stack-deploy-docs)
+[![GitHub Contributors](https://img.shields.io/github/contributors/cssnr/portainer-stack-deploy-action?logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/graphs/contributors)
+[![GitHub Dist Size](https://img.shields.io/github/size/cssnr/portainer-stack-deploy-action/dist%2Findex.js?logo=github&label=dist%20size)](https://github.com/cssnr/portainer-stack-deploy-action/blob/master/src/index.js)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/cssnr/portainer-stack-deploy-action?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/cssnr/portainer-stack-deploy-action?tab=readme-ov-file#readme)
+[![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/portainer-stack-deploy-action?logo=htmx)](https://github.com/cssnr/portainer-stack-deploy-action/blob/master/src/index.js)
+[![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/portainer-stack-deploy-action?logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/discussions)
+[![GitHub Forks](https://img.shields.io/github/forks/cssnr/portainer-stack-deploy-action?style=flat&logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/forks)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/cssnr/portainer-stack-deploy-action?style=flat&logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/stargazers)
+[![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&label=org%20stars)](https://cssnr.github.io/)
+[![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=support)](https://ko-fi.com/cssnr)
+
+</div>
+
+<Contributors :contributors="$contributors" heading="Contributors"  margin="36px 0 96px" />
+
 <style>
 div.badges {
     margin-top: 80px;
@@ -56,24 +77,3 @@ div.badges {
     transform: scale(1.05);
 }
 </style>
-
-<div class="badges">
-
----
-
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/portainer-stack-deploy-action?logo=github&label=updated)](https://github.com/cssnr/portainer-stack-deploy-action)
-[![Docs Last Commit](https://img.shields.io/github/last-commit/cssnr/portainer-stack-deploy-docs?logo=vitepress&logoColor=white&label=docs)](https://github.com/cssnr/portainer-stack-deploy-docs)
-[![GitHub Contributors](https://img.shields.io/github/contributors/cssnr/portainer-stack-deploy-action?logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/graphs/contributors)
-[![GitHub Dist Size](https://img.shields.io/github/size/cssnr/portainer-stack-deploy-action/dist%2Findex.js?logo=github&label=dist%20size)](https://github.com/cssnr/portainer-stack-deploy-action/blob/master/src/index.js)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/cssnr/portainer-stack-deploy-action?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/cssnr/portainer-stack-deploy-action?tab=readme-ov-file#readme)
-[![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/portainer-stack-deploy-action?logo=htmx)](https://github.com/cssnr/portainer-stack-deploy-action/blob/master/src/index.js)
-[![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/portainer-stack-deploy-action?logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/discussions)
-[![GitHub Forks](https://img.shields.io/github/forks/cssnr/portainer-stack-deploy-action?style=flat&logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/forks)
-[![GitHub Repo Stars](https://img.shields.io/github/stars/cssnr/portainer-stack-deploy-action?style=flat&logo=github)](https://github.com/cssnr/portainer-stack-deploy-action/stargazers)
-[![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&label=org%20stars)](https://cssnr.github.io/)
-[![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=support)](https://ko-fi.com/cssnr)
-
-</div>
-
-<Contributors :contributors="$contributors" heading="Contributors"  margin="36px 0 96px" />

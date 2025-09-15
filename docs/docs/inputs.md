@@ -6,6 +6,8 @@ title: Inputs Documentation
 
 💡 Click on the **Input Name** for more [Details](#details).
 
+<div class="table-inputs">
+
 | Input&nbsp;Name                  | Default&nbsp;Input&nbsp;Value | Short&nbsp;Description&nbsp;of&nbsp;Input |
 | :------------------------------- | :---------------------------- | :---------------------------------------- |
 | [name](#name) **\*** <CB />      | -                             | Stack Name                                |
@@ -28,6 +30,8 @@ title: Inputs Documentation
 | [headers](#headers) <CB />       | `"{}"`                        | Custom Headers JSON                       |
 | [fs_path](#fs_path) **¹** <CB /> | -                             | Relative Path (BE)                        |
 | [summary](#summary) <CB />       | `true`                        | Add Summary to Job                        |
+
+</div>
 
 > **\* Required**  
 > **¹ Business Edition**
@@ -258,9 +262,9 @@ For more information see [Job Summary](../guides/features.md#job-summary).
 
 Default: `true`
 
-<style module>
-table td:nth-child(1),
-table td:nth-child(3) {
-  white-space: nowrap;
+<style>
+.table-inputs td {
+    padding: 8px 12px !important;
+    white-space: nowrap;
 }
 </style>

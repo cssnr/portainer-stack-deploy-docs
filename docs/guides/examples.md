@@ -86,7 +86,7 @@ https://github.com/cssnr/portainer-stack-deploy-action/network/dependents
 If you have more questions, please [request support](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests)
 :::
 
-<style scoped>
+<style module>
 summary {
     color: var(--vp-c-brand-1);
 }
