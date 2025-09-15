@@ -3,6 +3,7 @@ import '@catppuccin/vitepress/theme/macchiato/mauve.css'
 import 'virtual:group-icons.css'
 import './custom.css'
 
+import CopyButton from './components/CopyButton.vue'
 import StackTable from './components/StackTable.vue'
 
 import Contributors from '@cssnr/vitepress-plugin-contributors'
@@ -15,6 +16,7 @@ export default {
 
     enhanceApp({ app }) {
         app.component('Badge', VPBadge)
+        app.component('CopyButton', CopyButton)
         app.component('StackTable', StackTable)
 
         app.component('Contributors', Contributors)
