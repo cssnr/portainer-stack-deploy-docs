@@ -12,19 +12,19 @@ Details about the stack are output for use in additional steps.
 | [swarmID](#swarmID) <CB />       | Swarm ID    |
 | [endpointID](#endpointID) <CB /> | Endpoint ID |
 
-### stackID
+### stackID <CB /> {#stackID}
 
 This is the Portainer Stack ID used by portainer to identify the stack.
 
 Example: `123`
 
-### swarmID
+### swarmID <CB /> {#swarmID}
 
 This is the Portainer Swarm ID that the stack was deployed too.
 
 Example: `wr8i8agdr05n6wsf1tkcnhwik`
 
-### endpointID
+### endpointID <CB /> {#endpointID}
 
 This is the Portainer Endpoint ID the stack was deployed too.
 

@@ -23,13 +23,13 @@ If you need more options, please [open a feature request](https://github.com/css
 
 Unless disabled, a Job Summary is generated to capture the command, output and errors.
 
-::: info Example Job Summary
+**Example Job Summary:**
 
----
+<div class="tip custom-block" style="padding-top: 16px;">
 
 <!--@include: ./include/summary-success.md-->
 
-:::
+</div>
 
 You can view an actual workflow run from the [Test job](https://github.com/cssnr/portainer-stack-deploy-action/actions/workflows/test.yaml) on GitHub _(requires login)_.
 
