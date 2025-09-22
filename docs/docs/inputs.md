@@ -1,12 +1,11 @@
 ---
 title: Inputs Documentation
+pageClass: inputs-page
 ---
 
 # Inputs
 
 💡 Click on the **Input Name** for more [Details](#details).
-
-<div class="table-inputs">
 
 | Input&nbsp;Name                  | Default&nbsp;Input&nbsp;Value | Short&nbsp;Description&nbsp;of&nbsp;Input |
 | :------------------------------- | :---------------------------- | :---------------------------------------- |
@@ -30,8 +29,6 @@ title: Inputs Documentation
 | [headers](#headers) <CB />       | `"{}"`                        | Custom Headers JSON                       |
 | [fs_path](#fs_path) **¹** <CB /> | -                             | Relative Path (BE)                        |
 | [summary](#summary) <CB />       | `true`                        | Add Summary to Job                        |
-
-</div>
 
 > **\* Required**  
 > **¹ Business Edition**
@@ -192,7 +189,6 @@ KEY_2="Value 2"
 ```
 
 Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
-
 :::
 
 ### merge_env <CB /> {#merge_env}
@@ -263,7 +259,7 @@ For more information see [Job Summary](../guides/features.md#job-summary).
 Default: `true`
 
 <style>
-.table-inputs td {
+.inputs-page td {
     padding: 8px 12px !important;
     white-space: nowrap;
 }
