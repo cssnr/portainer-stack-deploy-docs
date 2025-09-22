@@ -1,0 +1,36 @@
+// noinspection JSUnusedGlobalSymbols
+/**
+ * Repo List - used for StackTable.vue in features.md
+ *
+ * Sort Order - 1: Stars - 2: Forks - 3: Last Updated Date
+ * @type {string[]} Repo
+ */
+export const repos = [
+    'cssnr/portainer-stack-deploy-action',
+    'carlrygart/portainer-stack-deploy',
+    'kgierke/portainer-stack-deployment',
+    'LGinC/portainer-stack-deploy',
+    'newarifrh/portainer-service-webhook',
+    'BramKelchtermans/portainer-deploy-action',
+    'nvti/portainer-stack-deploy',
+    'wirgen/portainer-stack-redeploy-action',
+    'bots-house/portainer-deploy-stack-action',
+    'rrennoir/portainer-stack',
+    'luminos-company/portami',
+    'Hugollemos/deploy',
+    'sdjnmxd/portainer-stack-deploy',
+    'AlexPshkov/portainer-stack-deploy',
+    'Filaind/portainer-stack-deploy',
+    'spawnlab-dev/stack-deploy-action',
+    'nevcodia/portainer-stack-deployment',
+    'scod-br/portainer-stack-deploy',
+    'dann41/portainer-stack-deploy',
+    'ManicMade/portainer-git-stack-redeploy-action',
+    'fe5dds9/portainer-deploy-action',
+    'robin-moser/portainer-stack-deploy',
+    'SimonPrinz/portainer-deploy-action',
+    'KevinLamSeck/gh-action-portainer-stack-deploy',
+    'inova-notas/portainer-stack-deploy',
+    'Morgul/portainer-stack-deploy',
+    'mantichor/portainer-action',
+]
