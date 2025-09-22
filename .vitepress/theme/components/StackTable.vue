@@ -5,13 +5,12 @@ const props = defineProps({
 })
 
 function getLink(type, repo) {
-  const links = {
+  return {
     stars: `https://img.shields.io/github/stars/${repo}?style=${props.style}&label=%20&color=forestgreen`,
     forks: `https://img.shields.io/github/forks/${repo}?style=${props.style}&label=%20&color=blue`,
     last: `https://img.shields.io/github/last-commit/${repo}?display_timestamp=committer&style=${props.style}&label=%20`,
     language: `https://img.shields.io/github/languages/top/${repo}?style=${props.style}`,
-  }
-  return links[type]
+  }[type]
 }
 </script>
 
@@ -80,6 +79,7 @@ function getLink(type, repo) {
   padding: 4px;
 }
 .stack-table img {
+  display: inline-block;
   height: auto;
   width: auto;
   max-width: none;

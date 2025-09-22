@@ -34,8 +34,7 @@ table th {
 }
 
 .vp-doc p > img,
-.vp-doc p > a > img,
-.vp-doc table td img {
+.vp-doc p > a > img {
     display: inline-block;
     margin-right: 8px;
 }
