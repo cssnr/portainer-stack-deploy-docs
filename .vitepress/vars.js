@@ -1,9 +1,8 @@
-// noinspection JSUnusedGlobalSymbols
 /**
  * Repo List - used for StackTable.vue in features.md
  *
  * Sort Order - 1: Stars - 2: Forks - 3: Last Updated Date
- * @type {string[]} Repo
+ * @type {string[]} user/repo
  */
 export const repos = [
     'cssnr/portainer-stack-deploy-action',
