@@ -72,6 +72,7 @@ and all [feature requests](https://github.com/cssnr/portainer-stack-deploy-actio
 None of these actions have been tested. This is an exhaustive list of published actions.
 :::
 
+<!--suppress ES6UnusedImports -->
 <script setup>
 import { repos } from '../../.vitepress/vars.js'
 </script>
