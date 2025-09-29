@@ -77,6 +77,8 @@ For this you should use: [cssnr/stack-deploy-action](https://github.com/cssnr/st
 
 For more details visit the website: https://docker-deploy.cssnr.com/
 
+<!--@include: ./include/context-action.md-->
+
 &nbsp;
 
 ::: info Request a Feature
