@@ -75,7 +75,17 @@ This uses: [cssnr/web-request-action](https://github.com/cssnr/web-request-actio
 
 ## Workflows
 
+<details><summary>Workflow Run and Dispatch Trigger</summary>
+
+This uses the `workflow_run` trigger and an `if:` condition to only run after the job named `Build` is successful,
+while also allowing you to manually deploy any version you choose.
+
+<<< @/snippets/examples/workflows/workflow-run.yaml [yaml]
+
+</details>
 <details><summary>Full Workflow Example</summary>
+
+This combines a build, deploy, and cleanup into a single job.
 
 <<< @/snippets/examples/workflows/full.yaml [yaml]
 
