@@ -3,19 +3,15 @@ name: "Pages"
 on:
   workflow_dispatch:
   #push:
-  #  branches:
-  #    - "master"
+  #  branches: ["master"]
   #  paths:
-  #    - "docs/**"
-  #    - ".vitepress/**"
-  #    - "package.json"
   #    - ".github/workflows/pages.yaml"
+  #    - ".vitepress/**"
+  #    - "docs/**"
+  #    - "package*.json"
 
 env:
   CRAWLER_ID: "c294cc15-d908-4f35-a87c-c05e44904c16"
-
-permissions:
-  contents: read
 
 concurrency:
   group: pages
