@@ -1,13 +1,13 @@
 name: "Dev"
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/dev.yaml"
       - ".vitepress/**"
       - "docs/**"
       - "package*.json"
-  workflow_dispatch:
 
 env:
   SSH_HOST: ${{ secrets.DEV_DEPLOY_HOST }}
@@ -36,6 +36,12 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
+      - name: "Debug CTX github"
+        continue-on-error: true
+        env:
+          GITHUB_CTX: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CTX"
 
       - name: "Setup Node 24"
         uses: actions/setup-node@v6
