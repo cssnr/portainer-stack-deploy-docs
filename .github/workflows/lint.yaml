@@ -28,8 +28,8 @@ jobs:
         continue-on-error: true
         run: |
           echo "github.run_id: ${{ github.run_id }}"
-          echo "github.repository.html_url: ${{ github.repository.html_url }}"
-          echo "url: ${{ github.repository.html_url }}/actions/runs/${{ github.run_id }}"
+          echo "github.repository.html_url: ${{ github.event.repository.html_url }}"
+          echo "url: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}"
 
       - name: "Setup Node 24"
         uses: actions/setup-node@v6

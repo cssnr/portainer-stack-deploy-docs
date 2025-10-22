@@ -107,4 +107,4 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          description: ${{ needs.deploy.outputs.page_url }}
+          description: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}
