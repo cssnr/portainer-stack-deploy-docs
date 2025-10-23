@@ -25,7 +25,7 @@ export const repos = [
     'scod-br/portainer-stack-deploy',
     'dann41/portainer-stack-deploy',
     'ManicMade/portainer-git-stack-redeploy-action',
-    'fe5dds9/portainer-deploy-action',
+    // 'fe5dds9/portainer-deploy-action',
     'robin-moser/portainer-stack-deploy',
     'SimonPrinz/portainer-deploy-action',
     'KevinLamSeck/gh-action-portainer-stack-deploy',
