@@ -34,6 +34,8 @@ jobs:
     permissions:
       contents: read
     with:
+      name: "dev"
+      url: "https://dev-static.cssnr.com/"
       robots: true
     secrets:
       host: ${{ secrets.DEV_DEPLOY_HOST }}
