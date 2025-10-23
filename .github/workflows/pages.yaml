@@ -26,7 +26,7 @@ jobs:
     permissions:
       contents: read
     with:
-      build: "npm run docs:build"
+      build: "npm run build"
       path: ".vitepress/dist"
       pages: true
 
