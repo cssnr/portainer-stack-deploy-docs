@@ -29,7 +29,7 @@ The only 3 required inputs are [token](../docs/inputs.md#token), [url](../docs/i
 
 Check out the [Rolling Tags](features.md#rolling-tags) for more tag options, however `@v1` is recommended.
 
-[![Latest Version](https://img.shields.io/github/v/release/cssnr/portainer-stack-deploy-action?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/cssnr/portainer-stack-deploy-action/releases)
+<LatestVersion repo="cssnr/portainer-stack-deploy-action" />
 
 <div class="tip custom-block" style="padding-top: 8px">
 

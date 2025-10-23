@@ -4,6 +4,7 @@ import 'virtual:group-icons.css'
 import './custom.css'
 
 import StackTable from './components/StackTable.vue'
+import LatestVersion from './components/LatestVersion.vue'
 
 import CopyButton from '@cssnr/vitepress-plugin-copybutton'
 import '@cssnr/vitepress-plugin-copybutton/style.css'
@@ -21,6 +22,7 @@ export default {
     enhanceApp({ app }) {
         app.component('Badge', VPBadge)
         app.component('StackTable', StackTable)
+        app.component('LatestVersion', LatestVersion)
 
         app.component('CB', CopyButton)
         app.component('Contributors', Contributors)
