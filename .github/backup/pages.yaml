@@ -2,13 +2,13 @@ name: "Pages"
 
 on:
   workflow_dispatch:
-  push:
-    branches: [master]
-    paths:
-      - ".github/workflows/pages.yaml"
-      - ".vitepress/**"
-      - "docs/**"
-      - "package*.json"
+  #push:
+  #  branches: ["master"]
+  #  paths:
+  #    - ".github/workflows/pages.yaml"
+  #    - ".vitepress/**"
+  #    - "docs/**"
+  #    - "package*.json"
 
 env:
   crawler-id: "c294cc15-d908-4f35-a87c-c05e44904c16"
@@ -21,14 +21,49 @@ concurrency:
 jobs:
   build:
     name: "Build"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     if: ${{ !contains(github.event.head_commit.message, '#nodeploy') }}
-    uses: cssnr/workflows/.github/workflows/npm-build.yaml@master
-    permissions:
-      contents: read
-    with:
-      build: "npm run docs:build"
-      path: ".vitepress/dist"
-      pages: true
+
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: "Debug CTX github"
+        continue-on-error: true
+        env:
+          GITHUB_CTX: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CTX"
+
+      - name: "Setup Node 24"
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: "Configure Pages"
+        uses: actions/configure-pages@v5
+
+      - name: "Install Dependencies"
+        run: |
+          npm ci
+
+      - name: "Run Build"
+        run: |
+          npm run build
+
+      - name: "Upload Pages Artifact"
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .vitepress/dist
+
+      - name: "Send Failure Notification"
+        if: ${{ failure() }}
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
 
   deploy:
     name: "Deploy"
@@ -79,7 +114,7 @@ jobs:
           crawler_user_id: ${{ secrets.CRAWLER_USER_ID }}
           crawler_api_key: ${{ secrets.CRAWLER_API_KEY }}
 
-      - name: "Send Discord Notification"
+      - name: "Send Post-Deploy Notification"
         if: ${{ failure() }}
         uses: sarisia/actions-status-discord@v1
         with:
