@@ -44,8 +44,8 @@ You only need to set the [name](../docs/inputs.md#name), [url](../docs/inputs.md
 The compose [file](../docs/inputs.md#file) path is relative to your working directory.
 If you check out your repository to the root and your compose file is in the `app` directory, set [file](../docs/inputs.md#file) to: `app/docker-compose.yaml`
 
-You can provide environment variables from either a file or JSON.
-If providing secrets via [env_json](../docs/inputs.md#env_json) they should come from secure input (masked).
+You can provide environment variables from either a file or JSON/YAML.
+If providing secrets via [env_data](../docs/inputs.md#env_data) they should come from secure input (masked).
 
 <div class="tip custom-block" style="padding-top: 8px">
 

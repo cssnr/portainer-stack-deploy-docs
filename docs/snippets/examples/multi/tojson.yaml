@@ -17,4 +17,4 @@
     file: "docker-compose.yaml"
     url: ${{ secrets.PORTAINER_URL }}
     token: ${{ secrets.PORTAINER_TOKEN }}
-    env_json: ${{ toJSON(steps.import-secrets.outputs) }}
+    env_data: ${{ toJSON(steps.import-secrets.outputs) }}

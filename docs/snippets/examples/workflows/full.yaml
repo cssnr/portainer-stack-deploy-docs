@@ -103,7 +103,7 @@ jobs:
           name: ${{ env.stack-name }}
           username: ${{ vars.GHCR_USER }}
           password: ${{ secrets.GHCR_PASS }}
-          env_json: |
+          env_data: |
             {
               "VERSION": "$${{ github.ref_name }}",
               "STACK_NAME": "${{ env.stack-name }}",

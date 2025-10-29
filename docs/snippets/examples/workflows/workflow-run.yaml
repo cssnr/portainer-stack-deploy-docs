@@ -45,7 +45,7 @@ jobs:
           name: ${{ env.stack-name }}
           username: ${{ vars.GHCR_USER }}
           password: ${{ secrets.GHCR_PASS }}
-          env_json: |
+          env_data: |
             {
               "VERSION": "${{ env.version == 'master' && 'latest' || env.version }}",
               "STACK_NAME": "${{ env.stack-name }}",
