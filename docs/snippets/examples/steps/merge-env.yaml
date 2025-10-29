@@ -5,5 +5,5 @@
     file: "docker-compose.yaml"
     url: ${{ secrets.PORTAINER_URL }}
     token: ${{ secrets.PORTAINER_TOKEN }}
-    env_json: '{"KEY": "Value"}'
+    env_data: '{"KEY": "Value"}'
     merge_env: true

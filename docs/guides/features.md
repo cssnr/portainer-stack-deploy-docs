@@ -7,7 +7,7 @@ and [Business Enterprise Edition](https://www.portainer.io/solutions/portainer-f
 - Deploy or re-deploy an existing stack otherwise create a new stack.
 - Deploy from a repository or a compose file, see [type](../docs/inputs.md#type).
 - Deploy from a different [repo](../docs/inputs.md#repo) than the current one.
-- Provide environment variables in [JSON](../docs/inputs.md#env_json) or [file](../docs/inputs.md#env_file) format.
+- Provide environment variables in [JSON/YAML](../docs/inputs.md#env_data) or [file](../docs/inputs.md#env_file) format.
 - Automatically parse [Endpoint ID](../docs/inputs.md#endpoint) if only one endpoint.
 - Supports Docker Swarm and Docker [Standalone](../docs/inputs.md#standalone).
 - Supports custom [headers](../docs/inputs#headers) for services like Cloudflare Zero Trust.

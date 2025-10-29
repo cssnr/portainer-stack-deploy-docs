@@ -9,9 +9,9 @@ pageClass: inputs-page
 
 | Input&nbsp;Name                  | Default&nbsp;Input&nbsp;Value | Short&nbsp;Description&nbsp;of&nbsp;Input |
 | :------------------------------- | :---------------------------- | :---------------------------------------- |
-| [name](#name) **\*** <CB />      | -                             | Stack Name                                |
-| [url](#url) **\*** <CB />        | -                             | Portainer URL                             |
-| [token](#token) **\*** <CB />    | -                             | Portainer Token                           |
+| [name](#name) **\*** <CB />      | _Required_                    | Stack Name                                |
+| [url](#url) **\*** <CB />        | _Required_                    | Portainer URL                             |
+| [token](#token) **\*** <CB />    | _Required_                    | Portainer Token                           |
 | [file](#file) <CB />             | `docker-compose.yaml`         | Compose File                              |
 | [endpoint](#endpoint) <CB />     | `endpoints[0].Id`             | Portainer Endpoint                        |
 | [ref](#ref) <CB />               | `current reference`           | Repository Ref                            |
@@ -21,13 +21,14 @@ pageClass: inputs-page
 | [pull](#pull) <CB />             | `true`                        | Pull Images                               |
 | [type](#type) <CB />             | `repo`                        | Type [`repo`, `file`]                     |
 | [standalone](#standalone) <CB /> | `false`                       | Deploy Standalone Stack                   |
-| [env_json](#env_json) <CB />     | -                             | Dotenv JSON Data                          |
+| [env_data](#env_data) <CB />     | -                             | Dotenv JSON Data                          |
+| [env_json](#env_data) <CB />     | **DEPRECATED**                | Use [env_data](#env_data)                 |
 | [env_file](#env_file) <CB />     | -                             | Dotenv File Path                          |
 | [merge_env](#merge_env) <CB />   | `false`                       | Merge Env Vars                            |
 | [username](#username) <CB />     | -                             | Repository Username                       |
 | [password](#password) <CB />     | -                             | Repository Password                       |
-| [headers](#headers) <CB />       | `"{}"`                        | Custom Headers JSON                       |
 | [fs_path](#fs_path) **¹** <CB /> | -                             | Relative Path (BE)                        |
+| [headers](#headers) <CB />       | `"{}"`                        | Custom Headers JSON                       |
 | [summary](#summary) <CB />       | `true`                        | Add Summary to Job                        |
 
 > **\* Required**  
@@ -78,7 +79,7 @@ Default: `${endpoints[0]}`
 
 This defaults to the reference that triggered the workflow.
 
-If deploying from a different repository than the current one, you may want to specify the `ref` of that repository to deploy from.
+If deploying from a different [repo](#repo) than the current one, you may want to specify the `ref` of that repository to deploy from.
 
 Example: `refs/heads/master`
 
@@ -89,6 +90,8 @@ Default: <span v-pre>`${{ github.ref }}`</span>
 This defaults to the repository running the action.
 
 If you want to deploy a different repository, put the full http URL to that repository.
+
+Note: you probably also want to specify the [ref](#ref) from that repository to use.
 
 Example: `https://github.com/cssnr/portainer-stack-deploy-action`
 
@@ -122,28 +125,35 @@ Default: `repo`
 
 ### standalone <CB />
 
-Deploy a **compose** stack instead of _swarm_.
-Set to `true` to enable.
+Deploy a **compose** stack instead of _swarm_. Set to `true` to enable.
 
 Default: `false`
 
-### env_json <CB /> {#env_json}
+### env_data <CB /> {#env_data}
 
 Optional environment variables used when creating the stack.
-File should be in dotenv format and JSON should be an object. Example: {"KEY": "Value"}
 
-This can be used with [env_file](#env_file). Values in [env_file](#env_file) take precedence over these values.
+These can be provided in JSON or YAML format and can be used with [env_file](#env_file).
+Values in [env_file](#env_file) take precedence over these values.
 
-::: details View JSON Input Examples
+::: details View JSON/YAML Input Examples
 
 These examples are identical, just different ways of passing the input.
 
 ::: code-group
 
+```yaml [YAML]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_data: |
+      KEY: Value
+      KEY_2: Value 2
+```
+
 ```yaml [Multi-Line JSON]
 - uses: cssnr/portainer-stack-deploy-action@v1
   with:
-    env_json: |
+    env_data: |
       {
         "KEY": "Value",
         "KEY_2": "Value 2"
@@ -153,7 +163,7 @@ These examples are identical, just different ways of passing the input.
 ```yaml [Single Line JSON]
 - uses: cssnr/portainer-stack-deploy-action@v1
   with:
-    env_json: '{"KEY": "Value", "KEY_2": "Value 2"}'
+    env_data: '{"KEY": "Value", "KEY_2": "Value 2"}'
 ```
 
 Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
@@ -162,8 +172,8 @@ Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
 
 ::: warning
 Inputs are NOT secure unless using secrets or secure output (masked).
-Using `env_json` on a public repository will otherwise expose this data in the actions' logs.
-For an example of an action that produces secure out for use with `env_json` see the [hashicorp/vault-action example](../guides/examples.md#multi-step).
+Using `env_data` on a public repository will otherwise expose this data in the actions' logs.
+For an example of an action that produces secure out for use with `env_data` see the [hashicorp/vault-action example](../guides/examples.md#multi-step).
 To securely pass unmasked values, use the [env_file](#env_file) option.
 :::
 
@@ -171,7 +181,7 @@ To securely pass unmasked values, use the [env_file](#env_file) option.
 
 Environment File in [dotenv](https://www.npmjs.com/package/dotenv) format, parsed using [dotenv](https://www.npmjs.com/package/dotenv).
 
-This can be used with [env_json](#env_json). Values in this file take precedence over [env_json](#env_json).
+This can be used with [env_data](#env_data). Values in this file take precedence over [env_data](#env_data).
 
 ::: details View Environment File Input Example
 
@@ -194,9 +204,9 @@ Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
 ### merge_env <CB /> {#merge_env}
 
 Set this to `true` to merge the current environment variables from the existing stack
-with any newly provided variables in the [env_json](#env_json) or [env_file](#env_file) inputs.
+with any newly provided variables in the [env_data](#env_data) or [env_file](#env_file) inputs.
 
-When not providing the [env_json](#env_json) or [env_file](#env_file) inputs the
+When not providing the [env_data](#env_data) or [env_file](#env_file) inputs the
 current environment variables from the existing stack are always used.
 
 When deploying a new stack, there are no current environment variables to merge, and this has no effect.
@@ -215,11 +225,18 @@ Password for private repository authentication when [type](#type) is set to `rep
 
 This is **NOT** your Portainer password, see [token](#token) for Portainer authentication.
 
+### fs_path <CB /> <Badge type="tip" text="Business Edition" /> {#fs_path}
+
+Relative Path Support for Portainer BE.
+Set this to enable relative path volumes support for volume mappings in your compose file.
+
+_For more info see the [Portainer Documentation - Relative Path Support](https://docs.portainer.io/advanced/relative-paths)._
+
 ### headers <CB />
 
-Custom Headers in **JSON** format for services like Cloudflare Zero Trust.
+Custom Headers in JSON or YAML format for services like Cloudflare Zero Trust.
 
-The `headers` are parsed with JSON.parse and passed directly to axios:
+The `headers` are parsed with `JSON.parse` or `yaml.load` and passed directly to axios.
 
 ```javascript
 headers: { 'X-API-Key': token, ...JSON.parse(headers) }
@@ -227,28 +244,35 @@ headers: { 'X-API-Key': token, ...JSON.parse(headers) }
 
 ::: details View Headers Input Example
 
-```yaml
+::: code-group
+
+```yaml [YAML]
 - uses: cssnr/portainer-stack-deploy-action@v1
   with:
-    headers: |
+    env_data: |
+      CF-Access-Client-Id: ${{ secrets.CF_CLIENT_ID }}
+      CF-Access-Client-Secret: ${{ secrets.CF_CLIENT_SECRET }}
+```
+
+```yaml [Multi-Line JSON]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_data: |
       {
         "CF-Access-Client-Id": "${{ secrets.CF_CLIENT_ID }}",
         "CF-Access-Client-Secret": "${{ secrets.CF_CLIENT_SECRET }}"
       }
 ```
 
+```yaml [toJSON Output]
+- uses: cssnr/portainer-stack-deploy-action@v1
+  with:
+    env_data: ${{ toJSON(steps.import-secrets.outputs) }}
+```
+
 Note: Additional [inputs](../docs/inputs.md) are excluded for brevity.
 
 :::
-
-Default: `"{}"`
-
-### fs_path <CB /> <Badge type="tip" text="Business Edition" /> {#fs_path}
-
-Relative Path Support for Portainer BE.
-Set this to enable relative path volumes support for volume mappings in your compose file.
-
-_For more info see the [Portainer Documentation - Relative Path Support](https://docs.portainer.io/advanced/relative-paths)._
 
 ### summary <CB />
 
