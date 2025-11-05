@@ -5,4 +5,6 @@
     file: "docker-compose.yaml"
     url: ${{ secrets.PORTAINER_URL }}
     token: ${{ secrets.PORTAINER_TOKEN }}
-    env_file: .env
+    env_data: |
+      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+      VERSION: ${{ inputs.VERSION }}

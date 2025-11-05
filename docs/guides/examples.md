@@ -27,7 +27,13 @@ pageClass: examples-page
 </details>
 <details><summary>Specify environment variables</summary>
 
-<<< @/snippets/examples/steps/env.yaml [yaml]
+::: code-group
+<<< @/snippets/examples/steps/env.yaml {yaml} [File ~vscode-icons:folder-type-github~]
+<<< @/snippets/examples/steps/yaml.yaml {yaml} [YAML ~vscode-icons:file-type-yaml-official~]
+<<< @/snippets/examples/steps/json.yaml {yaml} [JSON ~vscode-icons:file-type-json~]
+:::
+
+To set the environment from outputs, see the [hashicorp/vault-action](#multi-step) example.
 
 </details>
 <details><summary>Merging existing environment variables</summary>
@@ -35,9 +41,12 @@ pageClass: examples-page
 <<< @/snippets/examples/steps/merge-env.yaml [yaml]
 
 </details>
-<details><summary>Multiline JSON data input</summary>
+<details><summary>Multiline YAML/JSON data input</summary>
 
-<<< @/snippets/examples/steps/json.yaml [yaml]
+::: code-group
+<<< @/snippets/examples/steps/yaml.yaml {yaml} [YAML ~vscode-icons:file-type-yaml-official~]
+<<< @/snippets/examples/steps/json.yaml {yaml} [JSON ~vscode-icons:file-type-json~]
+:::
 
 </details>
 <details><summary>Only run on release events</summary>
