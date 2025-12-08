@@ -23,7 +23,7 @@ export const repos = [
     'robin-moser/portainer-stack-deploy',
     'spawnlab-dev/stack-deploy-action',
     'nevcodia/portainer-stack-deployment',
-    'scod-br/portainer-stack-deploy',
+    // 'scod-br/portainer-stack-deploy',
     'dann41/portainer-stack-deploy',
     'ManicMade/portainer-git-stack-redeploy-action',
     // 'fe5dds9/portainer-deploy-action',
