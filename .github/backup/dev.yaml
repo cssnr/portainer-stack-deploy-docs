@@ -102,7 +102,7 @@ jobs:
             ./ "${{ env.SSH_USER }}"@"${{ env.SSH_HOST }}":"${{ env.SSH_DEST }}"
 
       - name: "Send Discord Notification"
-        uses: sarisia/actions-status-discord@v1
+        uses: sarisia/actions-status-discord@eb045afee445dc055c18d3d90bd0f244fd062708 # v1.16.0
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: "https://dev-static.cssnr.com/"
