@@ -61,9 +61,10 @@ jobs:
 
       - name: "Send Failure Notification"
         if: ${{ failure() }}
-        uses: sarisia/actions-status-discord@v1
+        uses: sarisia/actions-status-discord@eb045afee445dc055c18d3d90bd0f244fd062708 # v1.16.0
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
   deploy:
     name: "Deploy"
@@ -87,7 +88,7 @@ jobs:
       - name: "Send Deploy Notification"
         if: ${{ !cancelled() }}
         continue-on-error: true
-        uses: sarisia/actions-status-discord@v1
+        uses: sarisia/actions-status-discord@eb045afee445dc055c18d3d90bd0f244fd062708 # v1.16.0
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: ${{ steps.deployment.outputs.page_url }}
@@ -116,7 +117,7 @@ jobs:
 
       - name: "Send Post-Deploy Notification"
         if: ${{ failure() }}
-        uses: sarisia/actions-status-discord@v1
+        uses: sarisia/actions-status-discord@eb045afee445dc055c18d3d90bd0f244fd062708 # v1.16.0
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          description: ${{ github.event.repository.html_url }}/actions/runs/${{ github.run_id }}
+          description: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
