@@ -46,3 +46,13 @@ _This method is not recommended to [report issues](https://github.com/cssnr/port
 &nbsp;
 
 [![Ko-Fi](./public/images/ko-fi.png)](https://ko-fi.com/cssnr)
+
+<div style="text-align: center;">
+<a href="https://github.com/cssnr/portainer-stack-deploy-action/stargazers">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cssnr/portainer-stack-deploy-action&type=date&legend=bottom-right&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cssnr/portainer-stack-deploy-action&type=date&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=cssnr/portainer-stack-deploy-action&type=date&legend=bottom-right" />
+ </picture>
+</a>
+</div>
