@@ -15,9 +15,14 @@
 
 # Portainer Stack Deploy Action Docs
 
+<a title="Portainer Stack Deploy Action" href="https://portainer-deploy.cssnr.com/" target="_blank">
+<img alt="Portainer Stack Deploy Action" align="right" width="128" height="auto" src="https://raw.githubusercontent.com/cssnr/portainer-stack-deploy-docs/master/docs/public/images/logo/logo.png"></a>
+
 Documentation for the [Portainer Stack Deploy Action](https://github.com/cssnr/portainer-stack-deploy-action).
 
-- https://docker-deploy.cssnr.com/
+- https://portainer-deploy.cssnr.com/
+
+[![View Documentation](https://img.shields.io/badge/view_documentation-blue?style=for-the-badge&logo=googledocs&logoColor=white)](https://portainer-deploy.cssnr.com/)
 
 These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
 
