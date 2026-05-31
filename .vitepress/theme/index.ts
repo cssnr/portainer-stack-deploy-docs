@@ -6,6 +6,9 @@ import './custom.css'
 import StackTable from './components/StackTable.vue'
 import LatestVersion from './components/LatestVersion.vue'
 
+import VitePressChat from '@cssnr/vitepress-chat'
+import '@cssnr/vitepress-chat/style.css'
+
 import CopyButton from '@cssnr/vitepress-plugin-copybutton'
 import '@cssnr/vitepress-plugin-copybutton/style.css'
 
@@ -17,15 +20,20 @@ import contributors from '../contributors.json'
 // noinspection JSUnusedGlobalSymbols
 /** @type {import('vitepress').Theme} */
 export default {
-    ...DefaultTheme,
+  ...DefaultTheme,
 
-    enhanceApp({ app }) {
-        app.component('Badge', VPBadge)
-        app.component('StackTable', StackTable)
-        app.component('LatestVersion', LatestVersion)
+  ...VitePressChat(DefaultTheme, {
+    api: import.meta.env.VITE_AI_API,
+    headers: import.meta.env.VITE_AI_AUTH ? { Authorization: import.meta.env.VITE_AI_AUTH } : undefined,
+  }),
 
-        app.component('CB', CopyButton)
-        app.component('Contributors', Contributors)
-        app.config.globalProperties.$contributors = contributors
-    },
+  enhanceApp({ app }) {
+    app.component('Badge', VPBadge)
+    app.component('StackTable', StackTable)
+    app.component('LatestVersion', LatestVersion)
+
+    app.component('CB', CopyButton)
+    app.component('Contributors', Contributors)
+    app.config.globalProperties.$contributors = contributors
+  },
 }

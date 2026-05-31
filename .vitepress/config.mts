@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import vitePressInstructions from '@cssnr/vitepress-chat/instructions-plugin'
+
+// import llmstxt from 'vitepress-plugin-llms'
 
 const settings = {
   siteTitle: 'Portainer Deploy', // For Site Sidebar
@@ -16,16 +19,22 @@ const settings = {
   actions_url: 'https://github.com/marketplace/actions/portainer-stack-deploy-action',
 }
 
+const llmExcludes = ['index.md', 'guides/examples.md', 'guides/features.md', 'guides/include/**/*']
+
 // https://vitepress.dev/reference/site-config
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   srcDir: './docs',
   // base: '/path/',
   vite: {
+    envDir: '..',
     server: {
       allowedHosts: true,
     },
     plugins: [
+      // llmstxt(),
+      vitePressInstructions({ exclude: llmExcludes }),
+
       groupIconVitePlugin({
         customIcon: {
           git: 'vscode-icons:file-type-git',
