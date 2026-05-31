@@ -6,6 +6,11 @@ next:
 
 # Support
 
+[![Features](https://img.shields.io/badge/features-brightgreen?style=for-the-badge&logo=rocket&logoColor=white)](https://github.com/cssnr/portainer-stack-deploy-action/issues/new?template=1-feature.yaml)
+[![Issues](https://img.shields.io/badge/issues-red?style=for-the-badge&logo=southwestairlines&logoColor=white)](https://github.com/cssnr/portainer-stack-deploy-action/issues)
+[![Discussions](https://img.shields.io/badge/discussions-blue?style=for-the-badge&logo=theconversation)](https://github.com/cssnr/portainer-stack-deploy-action/discussions)
+[![Discord](https://img.shields.io/badge/discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wXy6m2X8wY)
+
 If you run into any issues or want to see any new features, please let us know!
 
 Contributing is as easy as telling us [what features or changes](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests) you want to see next…
@@ -33,15 +38,9 @@ If you run into any problems or find a bug, please [open an issue](https://githu
 
 You can chat with us about anything [on discord](https://discord.gg/wXy6m2X8wY).
 
+From here you can contact me directly, `Shane@111150265075298304`.
+
 [![Chat on Discord](https://img.shields.io/badge/Chat_on_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wXy6m2X8wY)
-
-### General Feedback
-
-You can submit general feedback via the [web form](https://cssnr.github.io/feedback/?app=Portainer%20Deploy%20Action).
-
-_This method is not recommended to [report issues](https://github.com/cssnr/portainer-stack-deploy-action/issues) or [request features](https://github.com/cssnr/portainer-stack-deploy-action/discussions/categories/feature-requests)._
-
-[https://cssnr.github.io/feedback/](https://cssnr.github.io/feedback/?app=Portainer%20Deploy%20Action)
 
 &nbsp;
 
