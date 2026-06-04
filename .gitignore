@@ -6,7 +6,6 @@ cache/
 dist/
 build/
 node_modules/
-web-ext-artifacts/
 *.tsbuildinfo
 # VitePress
 contributors.json

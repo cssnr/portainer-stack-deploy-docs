@@ -18,7 +18,6 @@ import contributors from '../contributors.json'
 
 // https://vitepress.dev/guide/extending-default-theme
 // noinspection JSUnusedGlobalSymbols
-/** @type {import('vitepress').Theme} */
 export default {
   ...DefaultTheme,
 

@@ -1,8 +1,5 @@
 {
-  "name": "portainer-stack-deploy-docs",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "docs": "npm run dev",
     "dev": "vitepress dev .",
@@ -15,7 +12,7 @@
   },
   "dependencies": {
     "@catppuccin/vitepress": "^0.1.2",
-    "@cssnr/vitepress-chat": "github:smashedr/vitepress-chat#0.0.8",
+    "@cssnr/vitepress-chat": "github:smashedr/vitepress-chat#0.0.10",
     "@cssnr/vitepress-plugin-contributors": "^0.2.0",
     "@cssnr/vitepress-plugin-copybutton": "^0.0.3",
     "vitepress": "^1.6.4",
