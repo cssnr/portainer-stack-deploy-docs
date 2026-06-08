@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import vitePressInstructions from '@cssnr/vitepress-chat/instructions-plugin'
+import instructions from 'vitepress-chat/instructions'
 
 // import llmstxt from 'vitepress-plugin-llms'
 
@@ -19,8 +19,6 @@ const settings = {
   actions_url: 'https://github.com/marketplace/actions/portainer-stack-deploy-action',
 }
 
-const llmExcludes = ['index.md', 'guides/examples.md', 'guides/features.md', 'guides/include/**/*']
-
 // https://vitepress.dev/reference/site-config
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
@@ -33,7 +31,10 @@ export default defineConfig({
     },
     plugins: [
       // llmstxt(),
-      vitePressInstructions({ exclude: llmExcludes }),
+      instructions({
+        filePath: 'llms.txt',
+        exclude: ['index.md', 'guides/examples.md', 'guides/features.md', 'guides/include/**/*'],
+      }),
 
       groupIconVitePlugin({
         customIcon: {
