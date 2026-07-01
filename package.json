@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "prettier": "^3.8.3",
-    "vitepress-chat": "^0.0.1"
+    "vitepress-chat": "^0.0.2"
   }
 }
