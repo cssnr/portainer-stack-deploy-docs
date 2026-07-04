@@ -5,6 +5,7 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
+    "prettier": "npm run prettier:write",
     "prettier:check": "npx prettier --check .",
     "prettier:write": "npx prettier --write .",
     "get-contributors": "npx get-contributors cssnr/portainer-stack-deploy-action",
@@ -18,7 +19,7 @@
     "vitepress-plugin-group-icons": "^1.7.5"
   },
   "devDependencies": {
-    "prettier": "^3.8.3",
-    "vitepress-chat": "^0.0.1"
+    "prettier": "^3.9.4",
+    "vitepress-chat": "^0.0.3"
   }
 }

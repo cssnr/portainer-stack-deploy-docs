@@ -27,11 +27,15 @@ pageClass: examples-page
 </details>
 <details><summary>Specify environment variables</summary>
 
+<!-- prettier-ignore-start -->
+
 ::: code-group
 <<< @/snippets/examples/steps/env.yaml {yaml} [File ~vscode-icons:folder-type-github~]
 <<< @/snippets/examples/steps/yaml.yaml {yaml} [YAML ~vscode-icons:file-type-yaml-official~]
 <<< @/snippets/examples/steps/json.yaml {yaml} [JSON ~vscode-icons:file-type-json~]
 :::
+
+<!-- prettier-ignore-end -->
 
 To set the environment from outputs, see the [hashicorp/vault-action](#multi-step) example.
 
@@ -43,10 +47,14 @@ To set the environment from outputs, see the [hashicorp/vault-action](#multi-ste
 </details>
 <details><summary>Multiline YAML/JSON data input</summary>
 
+<!-- prettier-ignore-start -->
+
 ::: code-group
 <<< @/snippets/examples/steps/yaml.yaml {yaml} [YAML ~vscode-icons:file-type-yaml-official~]
 <<< @/snippets/examples/steps/json.yaml {yaml} [JSON ~vscode-icons:file-type-json~]
 :::
+
+<!-- prettier-ignore-end -->
 
 </details>
 <details><summary>Only run on release events</summary>
