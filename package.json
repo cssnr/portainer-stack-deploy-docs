@@ -12,7 +12,7 @@
     "postinstall": "npm run get-contributors"
   },
   "dependencies": {
-    "@catppuccin/vitepress": "^0.1.2",
+    "@catppuccin/vitepress": "^0.1.4",
     "@cssnr/vitepress-plugin-contributors": "^0.2.0",
     "@cssnr/vitepress-plugin-copybutton": "^0.0.3",
     "vitepress": "^1.6.4",
@@ -20,6 +20,6 @@
   },
   "devDependencies": {
     "prettier": "^3.9.6",
-    "vitepress-chat": "^0.0.4"
+    "vitepress-chat": "^0.0.5"
   }
 }
