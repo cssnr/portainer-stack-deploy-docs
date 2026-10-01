@@ -19,7 +19,7 @@
     "vitepress-plugin-group-icons": "^1.7.6"
   },
   "devDependencies": {
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.9",
     "vitepress-chat": "^0.0.5"
   }
 }
